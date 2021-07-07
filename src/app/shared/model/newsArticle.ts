@@ -1,4 +1,4 @@
-export interface ArticlesNewsI {
+export interface NewsArticleI {
   urlToImage: string;
   author: string;
   title: string;

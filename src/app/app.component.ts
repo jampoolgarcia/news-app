@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NewsService } from './services/news.service';
+import { NewsArticleI } from './shared/model/newsArticle';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ import { NewsService } from './services/news.service';
 export class AppComponent {
   
   public title = 'News Search Engine';
-  public listNews = [];
+  public listNewsArticle: NewsArticleI[] = [];
 
   constructor(private _service: NewsService){
 

@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-import { ArticlesNewsI } from '../shared/model/articlesNews';
+import { NewsArticleI } from '../shared/model/newsArticle';
 
 const URL_BASE = environment.url_base;
 const API_KEY = environment.apiKey;
@@ -23,8 +23,8 @@ export class NewsService {
       )
   }
 
-  parseArticlesNews(data: any): ArticlesNewsI[] {
-    let list: ArticlesNewsI[] = [];
+  parseArticlesNews(data: any): NewsArticleI[] {
+    let list: NewsArticleI[] = [];
     data.articles?.forEach((elem: any) => {
       list.push({
         urlToImage: elem.urlToImage,
