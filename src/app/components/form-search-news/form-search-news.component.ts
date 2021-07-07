@@ -13,4 +13,8 @@ export class FormSearchNewsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmit(){
+    console.log('submit');
+  }
+
 }
