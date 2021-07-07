@@ -12,7 +12,7 @@ import { ListNewsComponent } from './components/list-news/list-news.component';
 import { NewsArticleComponent } from './components/list-news/news-article/news-article.component';
 import { FormSearchNewsComponent } from './components/form-search-news/form-search-news.component';
 import { FormsModule } from '@angular/forms';
-import { SpinnerComponent } from './components/spinner/spinner.component';
+import { SpinnerComponent } from './shared/components/spinner/spinner.component';
 
 @NgModule({
   declarations: [
