@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { NewsArticleI } from 'src/app/shared/model/newsArticle';
 
 @Component({
   selector: 'app-list-news',
@@ -6,14 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class ListNewsComponent implements OnInit {
+export class ListNewsComponent {
 
-  public listNews: any[] = [];
-  public isLoading: boolean = false;
+  @Input() listNewsArticle!: NewsArticleI[];
+  @Input() isLoading!: boolean;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

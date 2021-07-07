@@ -4,8 +4,11 @@ import { NewsArticleI } from 'src/app/shared/model/newsArticle';
 @Component({
   selector: 'app-news-article',
   templateUrl: './news-article.component.html',
-  styles: [
-  ]
+  styles: [`
+    .bg-none {
+      background-color: transparent !important;
+    }
+  `]
 })
 export class NewsArticleComponent {
 
