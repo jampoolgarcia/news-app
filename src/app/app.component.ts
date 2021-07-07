@@ -16,6 +16,12 @@ export class AppComponent {
   }
 
   getNews(body: { category: string, country: string}){
-    console.log(body);
+    const {category, country} = body;
+    this._service.getFilteredNews(country, category)
+        .subscribe(res => {
+          console.log(res);
+        }, err => {
+          console.log(err);
+        })
   }
 }
