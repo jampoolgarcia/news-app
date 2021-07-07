@@ -8,6 +8,11 @@ import { NewsArticleI } from 'src/app/shared/model/newsArticle';
     .bg-none {
       background-color: transparent !important;
     }
+
+    .h-45 {
+      height: 40% !important;
+    }
+
   `]
 })
 export class NewsArticleComponent {

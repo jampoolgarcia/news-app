@@ -1,12 +1,14 @@
-<div class="card h-100">
-    <img class="card-img-top" [src]="article.urlToImage" alt="article.author">
-    <div class="card-body">
-      <h6><span class="badge bg-primary">{{ article.author }}</span></h6>
-      <h3 class="card-title">{{ article.title }}</h3>
-      <p class="card-text">{{ article.description }}</p>
-    </div>
-    <div class="card-footer bg-none">
-      <a class="btn btn-primary w-100" [href]="article.url" role="button">See more</a>
-    </div>
+<div class="col h-100">
+  <div class="card h-100">
+      <img class="card-img-top img-fluid h-45" [src]="article.urlToImage" alt="article.author">
+      <div class="card-body">
+        <h6><span class="badge bg-primary">{{ article.author }}</span></h6>
+        <h3 class="card-title">{{ article.title }}</h3>
+        <p class="card-text truncate-overflow">{{ article.description }}</p>
+      </div>
+      <div class="card-footer bg-none">
+        <a class="btn btn-primary w-100" target="_blank" [href]="article.url" role="button">See more</a>
+      </div>
+  </div>
 </div>
 

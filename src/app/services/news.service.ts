@@ -17,7 +17,8 @@ export class NewsService {
   constructor(private _http: HttpClient) { }
 
   getFilteredNews(country: string, category: string): Observable<any> {
-    return this._http.get(`${URL_BASE}?country=${country}&category=${category}&apiKey=${API_KEY}`)
+    const url = `${URL_BASE}?country=${country}&category=${category}&apiKey=${API_KEY}`;
+    return this._http.get(url)
       .pipe(
         map((res: any) => this.parseArticlesNews(res))
       )

@@ -1,8 +1,6 @@
 <section class="my-4">
-  <div *ngIf="!isLoading; else spinner" class="row">
-    <div *ngFor="let article of listNewsArticle" class="col-lg-6 mb-4">
-      <app-news-article [article]="article"></app-news-article>
-    </div>
+  <div *ngIf="!isLoading; else spinner" class="row row-cols-1 row-cols-md-2 g-4">
+      <app-news-article class="mb-4" *ngFor="let article of listNewsArticle" [article]="article"></app-news-article>
   </div>
 
   <ng-template #spinner>
