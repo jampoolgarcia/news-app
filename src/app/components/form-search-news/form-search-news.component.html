@@ -5,20 +5,28 @@
         <h3 class="card-title text-center mb-4"><b>Filter news by countries and categories</b></h3>
         <form #form="ngForm" (submit)="onSubmit()">
           <div class="form-group">
-            <select class="form-control form-control-lg" placeholder="Category" name="category" id="category">
-              <option>All</option>
-              <option>Technology</option>
-              <option>Health</option>
+            <select class="form-control form-control-lg" 
+                    placeholder="Category" 
+                    name="category"
+                    [(ngModel)]="selectCategory" 
+                    id="category"
+                    required>
+              <option value="" disabled>Category</option>
+              <option [value]="category" *ngFor="let category of categories">{{ category }}</option>
             </select>
           </div>
           <div class="form-group">
-            <select class="form-control form-control-lg" placeholder="Country" name="country" id="country">
-              <option>Venezuela</option>
-              <option>Colombia</option>
-              <option>Chile</option>
+            <select class="form-control form-control-lg" 
+                    placeholder="Country"
+                    [(ngModel)]="selectCountry" 
+                    name="country" 
+                    id="country"
+                    required>
+              <option value="" disabled>Country</option>
+              <option [value]="country.value" *ngFor="let country of countries">{{ country.name }}</option>
             </select>
           </div>
-          <button type="submit" name="search" id="search" class="btn btn-primary btn-lg btn-block">Search</button>
+          <button type="submit" [disabled]="form.invalid" name="search" id="search" class="btn btn-primary btn-lg btn-block">Search</button>
         </form>
       </div>
     </div>

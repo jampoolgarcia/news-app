@@ -7,7 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 
 //  components
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { ListNewsComponent } from './components/list-news/list-news.component';
 import { NewsArticleComponent } from './components/list-news/news-article/news-article.component';
 import { FormSearchNewsComponent } from './components/form-search-news/form-search-news.component';

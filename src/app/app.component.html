@@ -1,6 +1,6 @@
-<app-navbar></app-navbar>
+<app-navbar [title]="title"></app-navbar>
 
 <div class="container">
-  <app-form-search-news></app-form-search-news>
+  <app-form-search-news (formEmitter)="getNews($event)"></app-form-search-news>
   <app-list-news></app-list-news>
 </div>

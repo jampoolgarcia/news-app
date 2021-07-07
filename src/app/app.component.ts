@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NewsService } from './services/news.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styles: []
 })
 export class AppComponent {
-  title = 'news-app';
+  
+  public title = 'News Search Engine';
+  public listNews = [];
+
+  constructor(private _service: NewsService){
+
+  }
+
+  getNews(body: { category: string, country: string}){
+    console.log(body);
+  }
 }
