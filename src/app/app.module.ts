@@ -14,14 +14,23 @@ import { FormSearchNewsComponent } from './components/form-search-news/form-sear
 import { FormsModule } from '@angular/forms';
 import { SpinnerComponent } from './shared/components/spinner/spinner.component';
 
+// pipes 
+import { CapitalizePipe } from './pipes/capitalize.pipe';
+
 @NgModule({
   declarations: [
+    // root 
     AppComponent,
+
+    // components
     NavbarComponent,
     ListNewsComponent,
     NewsArticleComponent,
     FormSearchNewsComponent,
-    SpinnerComponent
+    SpinnerComponent,
+
+    // pipes
+    CapitalizePipe,
   ],
   imports: [
     BrowserModule,

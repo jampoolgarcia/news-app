@@ -11,8 +11,8 @@
                     [(ngModel)]="selectCategory" 
                     id="category"
                     required>
-              <option value="" disabled>Category</option>
-              <option [value]="category" *ngFor="let category of categories">{{ category }}</option>
+              <option value="" disabled>Select category</option>
+              <option [value]="category" *ngFor="let category of categories">{{ category | capitalize }}</option>
             </select>
           </div>
           <div class="form-group">
@@ -22,7 +22,7 @@
                     name="country" 
                     id="country"
                     required>
-              <option value="" disabled>Country</option>
+              <option value="" disabled>select Country</option>
               <option [value]="country.value" *ngFor="let country of countries">{{ country.name }}</option>
             </select>
           </div>
