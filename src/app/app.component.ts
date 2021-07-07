@@ -11,18 +11,23 @@ export class AppComponent {
   
   public title = 'News Search Engine';
   public listNewsArticle: NewsArticleI[] = [];
+  public isLoading = false;
 
   constructor(private _service: NewsService){
 
   }
 
   getNews(body: { category: string, country: string}){
+    this.isLoading = true;
     const {category, country} = body;
     this._service.getFilteredNews(country, category)
-        .subscribe(res => {
-          console.log(res);
-        }, err => {
-          console.log(err);
-        })
+      .subscribe(data => {
+        this.isLoading =false;
+        this.listNewsArticle = data;
+      }, err => {
+        this.isLoading =false;
+        this.listNewsArticle = [];
+        console.log(err);
+      })
   }
 }
