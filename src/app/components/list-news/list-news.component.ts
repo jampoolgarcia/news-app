@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class ListNewsComponent implements OnInit {
 
   public listNews: any[] = [];
+  public isLoading: boolean = false;
 
   constructor() { }
 
